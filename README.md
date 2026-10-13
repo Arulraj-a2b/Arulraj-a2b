@@ -7,8 +7,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/typing-dark.svg">
-    <img src="assets/typing-light.svg" alt="Senior Frontend Engineer · Frontend Architect · Micro-frontend and design-system builder · React Native shipper" width="640">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/typed-roles-dark.svg">
+    <img src="assets/typed-roles-light.svg" alt="Senior Frontend Engineer · Frontend Architect · Micro-frontend and design-system builder · React Native shipper" width="640">
   </picture>
 </p>
 

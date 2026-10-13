@@ -73,10 +73,10 @@ function bannerHtml(theme) {
 function dividerHtml(theme, number, title) {
   const t = T[theme];
   return `<!doctype html><meta charset="utf-8"><style>${baseCss(t)}
-#stage{position:relative;width:1600px;height:96px;background:transparent;padding:18px 0 0 4px}
-.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:${t.accent2}}
-.title{font-size:34px;font-weight:700;letter-spacing:-.3px;margin-top:4px;line-height:1.1}
-.bar{width:48px;height:3px;border-radius:3px;background:${t.accent2};margin-top:8px}
+#stage{position:relative;width:1600px;height:124px;background:transparent;padding:20px 0 0 4px}
+.eyebrow{font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:${t.accent2}}
+.title{font-size:46px;font-weight:700;letter-spacing:-.3px;margin-top:4px;line-height:1.1}
+.bar{width:64px;height:4px;border-radius:3px;background:${t.accent2};margin-top:10px}
 body{background:transparent}</style><div id="stage"><div class="eyebrow mono">${number} · ${title}</div><div class="title display">${title}</div><div class="bar"></div></div>`;
 }
 
@@ -180,7 +180,7 @@ for (const theme of ['dark', 'light']) {
   for (const [n, title, key] of [['01', 'About me', 'about'], ['02', 'Key strengths', 'strengths'], ['03', 'Tech stack', 'stack'], ['04', 'Experience', 'experience'], ['05', 'Education', 'education']]) {
     await shoot(dividerHtml(theme, n, title), `divider-${key}-${theme}.png`, true);
   }
-  fs.writeFileSync(path.join(assets, `typing-${theme}.svg`), typingSvg(theme));
+  fs.writeFileSync(path.join(assets, `typed-roles-${theme}.svg`), typingSvg(theme));
   fs.writeFileSync(path.join(assets, `status-${theme}.svg`), statusSvg(theme));
   console.log('wrote typing/status', theme);
 }
