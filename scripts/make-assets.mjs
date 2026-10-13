@@ -149,6 +149,27 @@ function typingSvg(theme) {
 `;
 }
 
+
+// Link pills, rendered individually so each can be wrapped in its own <a> in the README.
+const LINKS = [
+  ['portfolio', 'Portfolio', 'siNetlify'],
+  ['linkedin', 'LinkedIn', null, 'in'],
+  ['email', 'Email', 'siGmail'],
+  ['cv', 'Download CV', 'siReaddotcv'],
+];
+function pillHtml(theme, label, slug, mono) {
+  const t = T[theme];
+  const icon = slug ? si[slug] : null;
+  const glyph = icon
+    ? `<svg viewBox="0 0 24 24" width="22" height="22" fill="${t.accent}"><path d="${icon.path}"/></svg>`
+    : `<span class="display" style="font-weight:700;font-size:20px;color:${t.accent};line-height:1">${mono}</span>`;
+  return `<!doctype html><meta charset="utf-8"><style>${baseCss(t)}
+body{background:transparent}
+#stage{display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 26px 0 20px;border-radius:999px;background:${theme === 'dark' ? 'rgba(99,102,241,0.14)' : 'rgba(79,70,229,0.08)'};border:1.5px solid ${theme === 'dark' ? 'rgba(165,180,252,0.45)' : 'rgba(79,70,229,0.4)'}}
+.label{font-family:"Space Grotesk",Inter,sans-serif;font-weight:600;font-size:20px;color:${t.text};letter-spacing:.1px}
+</style><div id="stage">${glyph}<span class="label">${label}</span></div>`;
+}
+
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' });
 const page = await browser.newPage({ viewport: { width: 1600, height: 500 }, deviceScaleFactor: 1.25 });
 async function shoot(html, file, transparent = false) {
@@ -162,6 +183,7 @@ async function shoot(html, file, transparent = false) {
 
 for (const theme of ['dark', 'light']) {
   await shoot(bannerHtml(theme), `banner-${theme}.png`);
+  for (const [key, label, slug, mono] of LINKS) await shoot(pillHtml(theme, label, slug, mono), `link-${key}-${theme}.png`, true);
   await shoot(tilesHtml(theme), `tiles-${theme}.png`, true);
   for (const [n, title, key] of [['01', 'About me', 'about'], ['02', 'Key strengths', 'strengths'], ['03', 'Tech stack', 'stack'], ['04', 'Experience', 'experience'], ['05', 'Education', 'education']]) {
     await shoot(dividerHtml(theme, n, title), `divider-${key}-${theme}.png`, true);

@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <a href="https://arulraj1997.netlify.app"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-arulraj1997.netlify.app-4f46e5?style=for-the-badge&logo=netlify&logoColor=white&labelColor=0a0a12"></a>
-  <a href="https://www.linkedin.com/in/abofficial1997"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-abofficial1997-4f46e5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0a12"></a>
-  <a href="mailto:abofficial1997@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-abofficial1997%40gmail.com-4f46e5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0a12"></a>
-  <a href="https://arulraj1997.netlify.app/Arulraj_Venkadachalam_CV.pdf"><img alt="CV" src="https://img.shields.io/badge/CV-Download%20PDF-4f46e5?style=for-the-badge&logo=readdotcv&logoColor=white&labelColor=0a0a12"></a>
+  <a href="https://arulraj1997.netlify.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.png"><img src="assets/link-portfolio-light.png" alt="Portfolio" height="28"></picture></a>&nbsp;
+  <a href="https://www.linkedin.com/in/abofficial1997"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.png"><img src="assets/link-linkedin-light.png" alt="LinkedIn" height="28"></picture></a>&nbsp;
+  <a href="mailto:abofficial1997@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-email-dark.png"><img src="assets/link-email-light.png" alt="Email" height="28"></picture></a>&nbsp;
+  <a href="https://arulraj1997.netlify.app/Arulraj_Venkadachalam_CV.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-cv-dark.png"><img src="assets/link-cv-light.png" alt="Download CV" height="28"></picture></a>
 </p>
 
 <picture>
