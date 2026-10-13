@@ -149,20 +149,6 @@ function typingSvg(theme) {
 `;
 }
 
-function statusSvg(theme) {
-  const t = T[theme];
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="40" viewBox="0 0 300 40" role="img" aria-label="Open to senior frontend roles">
-  <rect x="0.5" y="0.5" width="299" height="39" rx="19.5" fill="${t.glass}" stroke="${t.border}"/>
-  <circle cx="22" cy="20" r="5" fill="#22c55e"/>
-  <circle cx="22" cy="20" r="5" fill="none" stroke="#22c55e" stroke-width="2">
-    <animate attributeName="r" values="5;12" dur="1.6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".8;0" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
-  <text x="40" y="25" style="font:500 15px Inter,system-ui,-apple-system,sans-serif;fill:${t.text}">Open to senior frontend roles</text>
-</svg>
-`;
-}
-
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' });
 const page = await browser.newPage({ viewport: { width: 1600, height: 500 }, deviceScaleFactor: 1.25 });
 async function shoot(html, file, transparent = false) {
@@ -181,7 +167,6 @@ for (const theme of ['dark', 'light']) {
     await shoot(dividerHtml(theme, n, title), `divider-${key}-${theme}.png`, true);
   }
   fs.writeFileSync(path.join(assets, `typed-roles-${theme}.svg`), typingSvg(theme));
-  fs.writeFileSync(path.join(assets, `status-${theme}.svg`), statusSvg(theme));
-  console.log('wrote typing/status', theme);
+  console.log('wrote typed-roles', theme);
 }
 await browser.close();

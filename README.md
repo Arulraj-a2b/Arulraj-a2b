@@ -13,13 +13,6 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
-    <img src="assets/status-light.svg" alt="Open to senior frontend roles" width="300">
-  </picture>
-</p>
-
-<p align="center">
   <a href="https://arulraj1997.netlify.app"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-arulraj1997.netlify.app-4f46e5?style=for-the-badge&logo=netlify&logoColor=white&labelColor=0a0a12"></a>
   <a href="https://www.linkedin.com/in/abofficial1997"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-abofficial1997-4f46e5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0a12"></a>
   <a href="mailto:abofficial1997@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-abofficial1997%40gmail.com-4f46e5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0a12"></a>
