@@ -142,7 +142,7 @@ function typingSvg(theme) {
     </rect>
   </g>`;
   }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="48" viewBox="0 0 640 48" role="img" aria-label="${phrases.join(', ')}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="48" viewBox="0 0 640 48" role="img" aria-label="${phrases.join(', ').replace(/&/g, '&amp;')}">
   <style>text{font:500 22px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:${t.accent};letter-spacing:.02em}.caret{fill:${t.accent2}}.caret{animation:blink 1s steps(2,start) infinite}@keyframes blink{to{opacity:0}}</style>
   <text x="0" y="32" style="fill:${t.accent2};font-size:18px">&gt;</text>${parts}
 </svg>
